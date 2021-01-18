@@ -318,7 +318,7 @@
                                 </td>
                                 <td><i class="material-icons custom">question_answer</i>
                                     <p>A data structure is a feature that supports storing and processing data and maintaining relationships between data.
-                                        <p> An array in Java is a data structure that stores a fixed number of items of the same type or class.</p>
+                                        <p> An array in Java is a data structure that stores a fixed number of items the same type or class, either all primitives or all objects.</p>
                                 </td>
 
 
@@ -336,38 +336,115 @@
 
                                 <td>
 
-                                    <i class="material-icons custom">stars</i>What can an array store?<br>
+                                    <i class="material-icons custom">stars</i>Is an array an instance?<br>
                                     <i class="material-icons custom">stars</i>How is an array declared?<br>
-                                    <i class="material-icons custom">stars</i>How are array elements accessed?
+                                    <i class="material-icons custom">stars</i>How are array elements accessed?<br>
+                                    <i class="material-icons custom">stars</i>Is it easy to sequence through an array?<br>
                                     <br>
                                 </td>
                                 <td>
                                     <i class="material-icons custom">question_answer</i>
 
-                                    <p>Arrays store either all primitive data types or all objects.</p>
-                                    <p>An array is an object itself and has to be both declared and instantiated (newed up) to make space for the number of items.</p>
-                                    <p>You can declare an array of primitive types, like ints,<br> &nbsp;&nbsp;&nbsp;int[] numbers;<br><br> This does not allocate space in memory to store the array, or specify how many elements the array will hold. So, the
-                                        array should be newed up as well.<br><br> &nbsp;&nbsp;&nbsp;numbers = new int[5];
-                                        <br><br> This can be done with one line of code.<br><br> &nbsp;&nbsp;&nbsp;int[] numbers = new int[5];<br><br> An array of objects, <br><br> SoccerPlayer[] team = new SoccerPlayer[11];
 
-                                    </p>
-                                    <p>Array elements are accessed using square brackets and an index, arrayName[index], where index starts at 0 - arrays are zero-based. The index is valid between 0 and 1 less than the number of elements in the array.</p>
-                                    <p>int num = numbers[1];</p>
+                                    <p>An array is an object itself and has to be both
+                                        <button type="button" class="btn btn-info" id="declarenewuparray" data-toggle="popover" title="declare and new up an array" html="true">declared and instantiated</button> to make space for the number of items.</p>
+
+                                    <p>Array elements are accessed using square brackets and an index,
+                                        <br>arrayName[index]<br> where index starts at 0 - arrays are zero-based. The index is valid between 0 and 1 less than the
+                                        <button type="button" class="btn btn-info" id="numofelements" data-toggle="popover" title="number of array elements" html="true">number of elements in the array</button>. An invalid index results in an out of bounds
+                                        error.</p>
+                                    <p>You can use loops to traverse an array,
+                                        <button type="button" class="btn btn-info" id="forlooptraversal" data-toggle="popover" title="for loop" html="true">for loop</button>,
+                                        <button type="button" class="btn btn-info" id="enhancedforlooptraversal" data-toggle="popover" title="enhanced for loop" html="true">enhanced for loop</button>,
+                                        <button type="button" class="btn btn-info" id="whilelooptraversal" data-toggle="popover" title="while loop" html="true">while loop</button>.</p>
+
+                                    <!-- popover dialog content START-->
+                                    <div id="numofelementsinarray" style="display: none">
+                                        <div>
+                                            The number of elements in an array is given by<br>
+
+                                            <br> arrayName.length;
+
+                                            <p>This is the length property, so be careful not to include the parentheses, ().</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div id="declareinstantiatearray" style="display: none">
+                                        <div>
+                                            <p>You can declare an array of primitive types, like ints,<br> &nbsp;&nbsp;&nbsp;int[] numbers;<br><br> This does not allocate space in memory to store the array, or specify how many elements the array will hold.
+                                                So, the array should be newed up as well.<br><br> &nbsp;&nbsp;&nbsp;numbers = new int[5];
+                                                <br><br> This can be done with one line of code.<br><br> &nbsp;&nbsp;&nbsp;int[] numbers = new int[5];<br><br> An array of objects, like <br><br> SoccerPlayer[] team = new SoccerPlayer[11];
+                                                <br> ... can be created in the same way.
+
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div id="arrayforloop" style="display: none">
+                                        <div>
+                                            <p>Given array, arr,</p>
+                                            <p>for (int index = 0; index &lt; arr.length) {<br> &nbsp;&nbsp;&nbsp;System.out.println(arr[index]);
+                                                <br> &nbsp;&nbsp;&nbsp;}
+                                            </p>
+                                            <p>Given array of SoccerPlayer objects, team,</p>
+                                            <p>for (int index = 0; index &lt; team.length) {<br> &nbsp;&nbsp;&nbsp;System.out.println(team[index].getName());
+                                                <br> &nbsp;&nbsp;&nbsp;}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div id="arrayenhancedforloop" style="display: none">
+                                        <div>
+                                            <p>Given array, arr,</p>
+                                            <p>for (int item : arr) {<br> &nbsp;&nbsp;&nbsp; System.out.println(item);
+                                                <br> &nbsp;&nbsp;&nbsp;}
+                                            </p>
+                                            <p>Given array of SoccerPlayer objects, team,</p>
+                                            <p>for (SoccerPlayer player : team) {<br> &nbsp;&nbsp;&nbsp; System.out.println(player.getName());
+                                                <br> &nbsp;&nbsp;&nbsp;}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div id="arraywhileloop" style="display: none">
+                                        <div>
+                                            <p>Given array of int, arr,</p>
+                                            <p>int[] arr = {1,2,3,4,5,6,7,8,9};</p>
+                                            <p>int index = 0;</p>
+                                            <p>while (index &lt; arr.length) {<br> &nbsp;&nbsp;&nbsp; System.out.println(arr[index]);
+                                                <br>&nbsp;&nbsp;&nbsp; index++;
+                                                <br> &nbsp;&nbsp;}
+                                            </p>
+                                            <p>Given array of SoccerPlayer objects, team,</p>
+                                            <p>while (index &lt; team.length) {<br> &nbsp;&nbsp;&nbsp; System.out.println(team[index].getName());
+                                                <br>&nbsp;&nbsp;&nbsp; index++;
+                                                <br> &nbsp;&nbsp;}
+                                        </div>
+                                    </div>
+
+                                    <!-- popover dialog content STOP-->
                                 </td>
 
                             </tr>
                             <tr>
-                                <td colspan="2" class="infocell">Traversing Arrays
+                                <td colspan="2" class="infocell">ArrayLists
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <i class="material-icons custom">stars</i> How is the content of arrays printed? <br>
+                                    <i class="material-icons custom">stars</i> How are ArrayLists different from arrays? <br>
                                     <i class="material-icons custom">stars</i>
                                 </td>
                                 <td>
                                     <i class="material-icons custom">question_answer</i>
 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
 
@@ -792,7 +869,8 @@
                                     <p>Once a constructor is declared, then the empty constructor must be added to the constructor declarations.</p>
                                     <br> public SoccerPlayer() { // empty constructor<br> }
                                     <br><br><br> // Parameterized constructor<br> public SoccerPlayer(String name, double age, String position, String club) {<br> &nbsp; &nbsp;&nbsp; this.name = name;
-                                    <br> &nbsp; &nbsp;&nbsp; this.age = age;<br> &nbsp; &nbsp;&nbsp; this.position = position;<br> &nbsp; &nbsp;&nbsp; this.club = club;<br> }
+                                    <br> &nbsp; &nbsp;&nbsp; this.age = age;<br> &nbsp; &nbsp;&nbsp; this.position = position;
+                                    <br> &nbsp; &nbsp;&nbsp; this.club = club;<br> }
                                     <br>
 
 
@@ -1624,7 +1702,8 @@
                                     <p>A nested loop is required for processing a set of data in an inner loop for each value in an outer loop. An example would be processing blood work in a hospital for each patient in a ward full of patients with a common
                                         ailment and all patients requiring a set number of tests.</p>
                                     <br> int patientNumber = 1;<br> while (patientNumber &lt; MAX_PATIENTS) {<br> &nbsp; &nbsp;&nbsp; int testNumber = 1;<br> &nbsp; &nbsp;&nbsp; while (testNumber &lt;= TESTS_REQUIRED_COUNT)
-                                    <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; processTest(patientNumber, testNumber);<br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; testNumber++;<br> &nbsp; &nbsp;&nbsp; }<br> }
+                                    <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; processTest(patientNumber, testNumber);
+                                    <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; testNumber++;<br> &nbsp; &nbsp;&nbsp; }<br> }
                                     <br>
                                     <br>
                                     <br>
@@ -1632,7 +1711,8 @@
 
 
                                     <br> for (patientNumber = 1; patientNumber &lt; MAX_PATIENTS; patientNumber++) {<br> &nbsp; &nbsp;&nbsp; for (testNumber = 1; testNumber &lt;= TESTS_REQUIRED_COUNT; testNumber++)
-                                    <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; processTest(patientNumber, testNumber);<br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; testNumber++;
+                                    <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; processTest(patientNumber, testNumber);
+                                    <br> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; testNumber++;
                                     <br> &nbsp; &nbsp;&nbsp; }<br> }
                                     <br>
 
@@ -1809,9 +1889,13 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+
+
     <script>
         function updateSliderArrowsStatus(
             cardsContainer,
@@ -1943,6 +2027,58 @@
         }
     </script>
 
+    <!-- Pop overs -->
+    <script>
+        $(document).ready(function() {
+            $('#forlooptraversal').popover({
+                html: true,
+                content: function() {
+                    return $('#arrayforloop').html();
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#enhancedforlooptraversal').popover({
+                html: true,
+                content: function() {
+                    return $('#arrayenhancedforloop').html();
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#whilelooptraversal').popover({
+                html: true,
+                content: function() {
+                    return $('#arraywhileloop').html();
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#declarenewuparray').popover({
+                html: true,
+                content: function() {
+                    return $('#declareinstantiatearray').html();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#numofelements').popover({
+                html: true,
+                content: function() {
+                    return $('#numofelementsinarray').html();
+                }
+            });
+        });
+    </script>
 </body>
 
 
