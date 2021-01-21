@@ -278,6 +278,7 @@
     <div class="container buttons-container">
 
         <a href="https://jacquikane.github.io/APCSVocab1/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Unit Vocabulary</a>
+        <a href="https://jacquikane.github.io/Algorithms4CS/" class="btn btn-primary btn-lg active s2" role="button" aria-pressed="true">Array Algorithms</a>
         <a href="https://codingbat.com/java" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Coding Bat</a>
         <a href="https://myap.collegeboard.org/login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">AP Classroom</a>
     </div>
@@ -340,6 +341,7 @@
                                     <i class="material-icons custom">stars</i>How is an array declared?<br>
                                     <i class="material-icons custom">stars</i>How are array elements accessed?<br>
                                     <i class="material-icons custom">stars</i>Is it easy to sequence through an array?<br>
+                                    <i class="material-icons custom">stars</i>What key algorithms are used with arrays<br>
                                     <br>
                                 </td>
                                 <td>
@@ -349,23 +351,42 @@
                                     <p>An array is an object itself and has to be both
                                         <button type="button" class="btn btn-info" id="declarenewuparray" data-toggle="popover" title="declare and new up an array" html="true">declared and instantiated</button> to make space for the number of items.</p>
 
-                                    <p>Array elements are accessed using square brackets and an index,
-                                        <br>arrayName[index]<br> where index starts at 0 - arrays are zero-based. The index is valid between 0 and 1 less than the
+                                    <p>Array elements are accessed using square brackets and an index, or subscript,
+                                        <br>&nbsp;&nbsp;&nbsp;arrayName[index]<br> 
+                                         index starts at 0 as arrays are zero-based. 
+                                         The index is valid between 0 and 1 less than the
                                         <button type="button" class="btn btn-info" id="numofelements" data-toggle="popover" title="number of array elements" html="true">number of elements in the array</button>. An invalid index results in an out of bounds
                                         error.</p>
                                     <p>You can use loops to traverse an array,
                                         <button type="button" class="btn btn-info" id="forlooptraversal" data-toggle="popover" title="for loop" html="true">for loop</button>,
                                         <button type="button" class="btn btn-info" id="enhancedforlooptraversal" data-toggle="popover" title="enhanced for loop" html="true">enhanced for loop</button>,
-                                        <button type="button" class="btn btn-info" id="whilelooptraversal" data-toggle="popover" title="while loop" html="true">while loop</button>.</p>
+                                        <button type="button" class="btn btn-info" id="whilelooptraversal" data-toggle="popover" title="while loop" html="true">while loop</button>.
+                                    </p>
+
+                                        <p>There are <button type="button" class="btn btn-info" id="arrayalgorithms" data-toggle="popover" title="array algorithms" html="true">standard array algorithms</button>, for searching, sorting, finding max/min/average. </p>
 
                                     <!-- popover dialog content START-->
+                                    <div id="arrayalgorithmscontent" style="display: none">
+                                        <div>
+                                            <p>Some useful algorithms are:
+                                                <ol>
+                                                    <li>Linear Search</li>
+                                                    <li>Binary Search</li>
+                                                    <li>Finding the average value</li>
+                                                    <li>Finding the min or max value</li>
+<li>Insert Sort</li>
+<li>Select Sort</li>
+                                                </ol> 
+                                            See the link for <i>Array Algorithms</i> below, and check the code and efficiency.</p>
+                                        </div>
+                                    </div>
                                     <div id="numofelementsinarray" style="display: none">
                                         <div>
                                             The number of elements in an array is given by<br>
 
-                                            <br> arrayName.length;
-
-                                            <p>This is the length property, so be careful not to include the parentheses, ().</p>
+                                            <br> &nbsp;&nbsp;arrayName.length;
+<br><br>
+                                            <p>This is the length property, be careful not to include the parentheses, ().</p>
                                         </div>
                                     </div>
 
@@ -385,12 +406,13 @@
 
                                     <div id="arrayforloop" style="display: none">
                                         <div>
-                                            <p>Given array, arr,</p>
-                                            <p>for (int index = 0; index &lt; arr.length) {<br> &nbsp;&nbsp;&nbsp;System.out.println(arr[index]);
+                                            <p>Given array, arr, of ints</p>
+                                            <p>for (int index = 0; index &lt; arr.length; index++) {<br> &nbsp;&nbsp;&nbsp;System.out.println(arr[index]);
                                                 <br> &nbsp;&nbsp;&nbsp;}
                                             </p>
                                             <p>Given array of SoccerPlayer objects, team,</p>
-                                            <p>for (int index = 0; index &lt; team.length) {<br> &nbsp;&nbsp;&nbsp;System.out.println(team[index].getName());
+                                            <p>for (int index = 0; index &lt; team.length; index++) {
+                                                <br> &nbsp;&nbsp;&nbsp;System.out.println(team[index].getName());
                                                 <br> &nbsp;&nbsp;&nbsp;}
                                             </p>
                                         </div>
@@ -398,7 +420,7 @@
 
                                     <div id="arrayenhancedforloop" style="display: none">
                                         <div>
-                                            <p>Given array, arr,</p>
+                                            <p>Given array, arr, of ints</p>
                                             <p>for (int item : arr) {<br> &nbsp;&nbsp;&nbsp; System.out.println(item);
                                                 <br> &nbsp;&nbsp;&nbsp;}
                                             </p>
@@ -419,6 +441,7 @@
                                                 <br> &nbsp;&nbsp;}
                                             </p>
                                             <p>Given array of SoccerPlayer objects, team,</p>
+                                            <p>int index = 0;</p>
                                             <p>while (index &lt; team.length) {<br> &nbsp;&nbsp;&nbsp; System.out.println(team[index].getName());
                                                 <br>&nbsp;&nbsp;&nbsp; index++;
                                                 <br> &nbsp;&nbsp;}
@@ -1999,10 +2022,10 @@
         $(document).ready(function() {
             $('input[type=checkbox][id=include2]').change(function() {
                 if ($(this).prop("checked")) {
-                    alert(`${this.value} you will see all 10 units`);
+                    alert(`You will see all 10 units`);
                     includeall = true;
                 } else {
-                    alert(`${this.value} you will see only material in units 1 through 5`);
+                    alert(`You will see only material in units 1 through 5`);
                     includeall = false;
                 }
                 showhide(includeall);
@@ -2079,6 +2102,17 @@
             });
         });
     </script>
+
+<script>
+    $(document).ready(function() {
+        $('#arrayalgorithms').popover({
+            html: true,
+            content: function() {
+                return $('#arrayalgorithmscontent').html();
+            }
+        });
+    });
+</script>
 </body>
 
 
