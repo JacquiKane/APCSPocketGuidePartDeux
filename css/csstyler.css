@@ -172,6 +172,10 @@ body {
     margin: 20px;
 }
 
+.keycard {
+    text-align: center;
+}
+
 .cards {
     display: -webkit-box;
     display: -ms-flexbox;
