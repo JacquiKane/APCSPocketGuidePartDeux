@@ -163,6 +163,10 @@ body {
     padding: 5%;
 }
 
+.buttonexternal {
+    padding: 5%;
+}
+
 #cards-container {
     overflow: hidden;
     margin: 20px;
@@ -954,8 +958,8 @@ p {
 
 .keyquestions {
     text-align: center;
-    padding-left: 25%;
-    padding-right: auto;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .s2 {
