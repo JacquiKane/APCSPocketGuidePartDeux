@@ -57,7 +57,7 @@
                 <input type="checkbox" id="include2" checked>
                 <span class="slider round"></span>
             </label>
-            <label class="form-check-label" for="include2">
+            <label for="include2">
                 Include material from units 6 through 10
             </label>
 
@@ -328,12 +328,21 @@
                                 <td class="infocell" colspan="2">Data Structures</td>
                             </tr>
                             <tr>
-                                <td><i class="material-icons custom">stars</i>what's a 'data structure'?<br>
-                                    <i class="material-icons custom">stars</i>What's an array?<br>
+                                <td><i class="material-icons custom">
+                                    stars</i>what's a <i>data structure</i>?<br>
+                                    <i class="material-icons custom">stars</i>What's an Array?<br>
+                                    <i class="material-icons custom">stars</i>What's an ArrayList?<br>
                                 </td>
                                 <td><i class="material-icons custom">question_answer</i>
-                                    <p>A data structure is a feature that supports storing and processing data and maintaining relationships between data.
-                                        <p> An array in Java is a data structure that stores a fixed number of items the same type or class, either all primitives or all objects.</p>
+                                    <p>A data structure is a feature that supports storing 
+                                        and processing data and maintaining relationships 
+                                        between data.
+                                        <p> An array in Java is a data structure that stores 
+                                            a fixed number of items the same type or class, 
+                                            either all primitives or all objects.</p>
+                                            <p>An ArrayList instance is a data structure 
+                                                that can be added to dynamically. 
+                                                ArrayLists can only store objects, not primitives. </p>
                                 </td>
 
 
@@ -363,7 +372,11 @@
 
 
                                     <p>An array is an object itself and has to be both
-                                        <button type="button" class="btn btn-info" id="declarenewuparray" data-toggle="popover" title="declare and new up an array" html="true">declared and instantiated</button> to make space for the number of items.</p>
+                                        <button type="button" class="btn btn-info" 
+                                        id="declarenewuparray" data-toggle="popover" 
+                                        title="declare and new up an array" 
+                                        html="true">declared and instantiated</button> 
+                                        to make space for the number of items.</p>
 
                                     <p>Array elements are accessed using square brackets and an index, or subscript,
                                         <br>&nbsp;&nbsp;&nbsp;arrayName[index]<br> index starts at 0 as arrays are zero-based. The index is valid between 0 and 1 less than the
@@ -379,7 +392,7 @@
                                     <p>There are <button type="button" class="btn btn-info" id="arrayalgorithms" data-toggle="popover" title="array algorithms" html="true">standard array algorithms</button>, for searching, sorting, finding max/min/average.
                                     </p>
 
-                                    <!-- popover dialog content START-->
+                                    <!-- popover dialog content START for ARRAYS --------------->
                                     <div id="arrayalgorithmscontent" style="display: none">
                                         <div>
                                             <p>Some useful algorithms are:
@@ -473,15 +486,98 @@
                             <tr>
                                 <td>
                                     <i class="material-icons custom">stars</i> How are ArrayLists different from arrays? <br>
-                                    <i class="material-icons custom">stars</i>
+                                    <i class="material-icons custom">stars</i>Is an <i>ArrayList</i> an instance?<br>
+                                    <i class="material-icons custom">stars</i>How is an ArrayList object declared?<br>
+                                    <i class="material-icons custom">stars</i>How are elements accessed?<br>
+                                    <i class="material-icons custom">stars</i>Is it easy to sequence through an ArrayList instance?<br>
+                                    <i class="material-icons custom">stars</i>What key algorithms are used with ArrayLists<br>
                                 </td>
                                 <td>
                                     <i class="material-icons custom">question_answer</i>
+                                    <p>
+ArrayList instances dynamically grow (you can add more elements) and shrink (you can remove elements). ArrayList instances can only store references, not primitives. So, if required to store doubles, 
+ints or booleans, the 
 
+<button type="button" class="btn btn-info" 
+                                        id="wrapperclassespopup" data-toggle="popover" 
+                                        title="Wrapper Classes" 
+                                        html="true"><i>wrapper classes</i></button> are used.
+</p>
+<p>The ArrayList class is <button type="button" class="btn btn-info" 
+    id="importpopup" data-toggle="popover" 
+    title="Import java.util.ArrayList" 
+    html="true"><i>imported</i></button> 
+    into a Java application.
+    
+    <p>The class, ArrayList, is <button type="button" class="btn btn-info" 
+        id="declarenewuparraylistpopup" data-toggle="popover" 
+        title="declare and new up ArrayList" 
+        html="true"><i>newed up/instantiated</i></button> to create an instance.
+   </p>
+
+<p>Elements are accessed by using the <button type="button" class="btn btn-info" 
+    id="accessarraylistpopup" data-toggle="popover" 
+    title="Access ArrayList Elements" 
+    html="true"><i><i>get</i> method</i></button> and a valid index. 
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+
+ <!-- popover dialog content START for ARRAYLISTS --------------->
+ <div id="wrapperclassescontent" style="display: none">
+    <div>
+        <p><i>Wrapper Classes</i> 'wrap' a primitive to reflect as an object.The Wrapper classes are
+            <ol>
+                <li>Double, for double</li>
+                <li>Integer, for int</li>
+                <li>Boolean, for boolean</li>
+               
+            </ol>
+            ... and others outside the scope of the course.</p>
+    </div>
+</div>
+
+
+<div id="importcontent" style="display: none">
+    <div>
+        <p>It is necessary to import the ArrayList class, this is the most 
+            economical way to include just ArrayList,</p>
+<p>import java.util.ArrayList;</p>
+<p>If this import is not included, the ArrayList class is not recognized.</p>
+    </div>
+</div>
+
+
+<div id="declarenewuparraylistcontent" style="display: none">
+    <div>
+        <p>Given class, Employee, </p>
+        <p>ArrayList&lt;Employee&gt; employees = new ArrayList&lt;Employee&gt;();</p>
+        <p>A list of numbers,</p>
+        <p>ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;();</p>
+        <p>A list of objects,</p>
+<p>ArrayList objectsAll = new ArrayList();</p>
+    </div>
+</div>
+
+<div id="accessarraylistcontent" style="display: none">
+    <div>
+        <p>The <i>get</i> method is used to access an element of the ArrayList instance. 
+            A numeric index is used, 
+            between 0 and the last valid index. </p>
+            Given a list of instances of Employee instances, where Employee is a class, 
+            the element at index 2 is accessed like this,</p>
+            <p>Employee employee = employees.get(2);</p>
+<p>If the index is outside the bounds of the list, as in less than 0 or greater than the number of elements in the list, 
+    less 1, an <i>out of bounds error</i> results</p>
+    <p>It is best to use the .size() method to best determine the last viable index,</p>
+    <p>Employee employee1 = employees.get(employeeArrayList.size()-1);</p>
+    </div>
+</div>
+
+
+ <!-- popover dialog content END for ARRAYLISTS --------------->
+
 
                 </div>
 
@@ -492,6 +588,11 @@
             </div>
         </div>
     </div>
+
+
+
+
+
 
     <!-- VOCABULARY VERIFIER -->
     <div class="modal" id="vocabverifier" tabindex=-1 aria-labelledby="vocabverifierLabel" aria-hidden="true">
@@ -2127,6 +2228,51 @@
             });
         });
     </script>
+
+<script>
+    $(document).ready(function() {
+        $('#wrapperclassespopup').popover({
+            html: true,
+            content: function() {
+                return $('#wrapperclassescontent').html();
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#importpopup').popover({
+            html: true,
+            content: function() {
+                return $('#importcontent').html();
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#declarenewuparraylistpopup').popover({
+            html: true,
+            content: function() {
+                return $('#declarenewuparraylistcontent').html();
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#accessarraylistpopup').popover({
+            html: true,
+            content: function() {
+                return $('#accessarraylistcontent').html();
+            }
+        });
+    });
+</script>
+
 </body>
 
 
