@@ -848,7 +848,7 @@ i.custom {
 }
 
 .site-header .page-section-title {
-    font-size: 2em;
+    font-size: 1em;
     font-family: var(--font-family-sans-serif);
     font-weight: bolder;
 }
@@ -896,7 +896,7 @@ i.custom {
 }
 
 .site-header .page-section-title {
-    font-size: 3em;
+    font-size: 2em;
     font-family: var(--font-family-sans-serif);
     font-weight: bolder;
 }
