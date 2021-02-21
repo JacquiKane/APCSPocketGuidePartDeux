@@ -99,7 +99,7 @@
                     </a>
                     <div class="container">
                         <h4>
-                            <b>Data Structures: Arrays, ArrayLists</b>
+                            <b>Data Structures: Arrays, 2D Arrays ArrayLists</b>
                         </h4>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                     </a>
                     <div class="container">
                         <h4>
-                            <b>Very Classy</b>
+                            <b>OOP: Very Classy</b>
                         </h4>
                     </div>
                 </div>
@@ -146,12 +146,22 @@
                     </a>
                     <div class="container">
                         <h4>
-                            <b>I, Object</b>
+                            <b>OOP: I, <s>Dissent</s> Object</b>
                         </h4>
                     </div>
                 </div>
 
 
+                <div class="card s2">
+                    <a data-toggle="modal" data-target="#inheritance" data-highres="inheritance.png" href="#">
+                        <img src="images\inheritance.png" alt="Inheritance" style="width:100%">
+                    </a>
+                    <div class="container">
+                        <h4>
+                            <b>OOP: Inheritance</b>
+                        </h4>
+                    </div>
+                </div>
 
 
                 <div class="card">
@@ -231,7 +241,7 @@
 
 
                 <div class="card s2" id="sample2">
-                    <a data-toggle="modal" data-target="#" data-highres="recursion.png" href="#">
+                    <a data-toggle="modal" data-target="#recursion" data-highres="recursion.png" href="#">
                         <img src="images\recursion.png" alt="Recursion" style="width:100%">
 
                     </a>
@@ -465,6 +475,7 @@
                                     <i class="material-icons custom">stars</i> How are ArrayLists different from arrays? <br>
                                     <i class="material-icons custom">stars</i>Is an <i>ArrayList</i> an instance?<br>
                                     <i class="material-icons custom">stars</i>How is an ArrayList object declared?<br>
+                                    <i class="material-icons custom">stars</i>What methods are used for ArrayLists?<br>
                                     <i class="material-icons custom">stars</i>How are elements accessed?<br>
                                     <i class="material-icons custom">stars</i>Is it easy to sequence through an ArrayList instance?<br>
                                     <i class="material-icons custom">stars</i>What key algorithms are used with ArrayLists<br>
@@ -481,7 +492,7 @@
                                         <p>The class, ArrayList, is <button type="button" class="btn btn-info" id="declarenewuparraylistpopup" data-toggle="popover" title="declare and new up ArrayList" html="true"><i>newed up/instantiated</i></button> to
                                             create an instance.
                                         </p>
-
+                                        <p>Methods commonly used are <a href="https://jacquikane.github.io/APCSArrayListImportantMethods/">get, set, remove, add</a>.</p>
                                         <p>Elements are accessed by using the <button type="button" class="btn btn-info" id="accessarraylistpopup" data-toggle="popover" title="Access ArrayList Elements" html="true"><i><i>get</i> method</i></button> and a
                                             valid index. </p>
                                         <p> <button type="button" class="btn btn-info" id="forarraylistpopup" data-toggle="popover" title="for loop with ArrayList instance" html="true"><i>for</i></button>,
@@ -1172,7 +1183,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="infocell" colspan="2">Attribbutes and how they are accessed</td>
+                                <td class="infocell" colspan="2">Attributes and how they are accessed</td>
                             </tr>
                             <td>
 
@@ -1361,6 +1372,107 @@
     </div>
 
 
+    <!-- INHERITANCE -->
+    <div class="modal" id="inheritance" tabindex=-1 aria-labelledby="inheritanceLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="inheritanceModalLabel">Inheritance, OOP</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <table class="tablequestion question-table">
+                        <tbody>
+                            <tr>
+                                <td class="infocell" colspan="2">Inheritance</td>
+                            </tr>
+                            <tr>
+                                <td><i class="material-icons custom">stars</i> What is inheritance?<br>
+                                    <i class="material-icons custom">stars</i> How is inheritance useful?<br>
+                                    <i class="material-icons custom">stars</i> Can a class inherit from more than one other?<br>
+                                    <i class="material-icons custom">stars</i> Is inheritance part of OOP?<br>
+                                </td>
+                                <td><i class="material-icons custom">question_answer</i>
+                                    <p>A class is a software template for creating a software model, called an object. Inheritance allows the reuse of the code from a class, called the parent class or superclass, as the basis for another class, called the
+                                        child class or subclass.</p>
+                                    <p>In Java, a class can only inherit from one other class, we say it doesn't support multiple inheritance. </p>
+                                    <p>Inheritance is one of the 4 tenets of Object Oriented Programming!</p>
+                                    <p>Inheritance supports reuse of all the code and logic already developed in the parent class. This leads to less lines of code and easier maintenance.</p>
+
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="infocell" colspan="2">The Mechanics of Inheritance</td>
+                            </tr>
+                            <tr>
+                                <td><i class="material-icons custom">stars</i> How is inheritance done in Java?<br>
+                                    <i class="material-icons custom">stars</i> What is overriding?
+                                </td>
+                                <td>
+                                    <i class="material-icons custom">question_answer</i>
+                                    <p>A class is designated as a subclass of another class, with the keyword, extends.</p>
+                                    <p>A subclass can rewrite a method with the same signature as in the superclass. When this method is called on an instance of the subclass, the method belonging to the subclass is called. </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="infocell" colspan="2">Polymorphism</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i class="material-icons custom">stars</i>What's Polymorphism?<br>
+                                    <i class="material-icons custom">stars</i>What's the link between inheritance and polymorphism?<br>
+
+                                </td>
+                                <td>
+                                    <i class="material-icons custom">question_answer</i>
+                                    <p>
+
+                                    </p>
+                                    Polymorphism is defined as the ability of different objects (related via inheritance) to respond to the same request in different ways. </p>
+                                    <p>A subclass can override a method defined in the superclass, and thus respond in a different way to an instance of the superclass.</p>
+
+
+                                    <br>
+
+
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="infocell" colspan="2">Class Cast Exceptions</td>
+                            </tr>
+                            <td>
+
+
+                                <i class="material-icons custom">stars</i> What's a Class cast Exception?<br>
+
+
+                            </td>
+                            <td>
+                                <p> <i class="material-icons custom">question_answer</i>
+                                    <p>A class cast exception occurs when an object is instantiated using a subclass, but cast to the parent class.</p>
+                            </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Method -->
     <div class="modal center-me" id="method" tabindex=-1 aria-labelledby="methodLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
@@ -1381,6 +1493,7 @@
 
                             <tr>
                                 <td>
+                                    <i class="material-icons custom">stars</i> What's a method?<br>
                                     <i class="material-icons custom">stars</i> What's a method header?<br>
                                     <i class="material-icons custom">stars</i> What does 'return' mean?<br>
                                     <i class="material-icons custom">stars</i> Do methods always return stuff?<br>
@@ -1389,7 +1502,7 @@
                                     <i class="material-icons custom">question_answer</i>
                                     <p>
                                         Methods are blocks of code, given a name, and an optional set of values to be passed in to the method from the calling code. Methods also specify what, if any, information is to be passed back from the method to the calling code. This comprises the method
-                                        header.
+                                        header. Methods are associated with a class or an object and are called in this context, as opposed to a free standing <i>function</i>.
                                     </p>
                                     <p>
                                         &lt;(optional)accessibility modifier&gt; &lt;return type&gt; &lt;method name&gt; (&lt;parameter list &gt;(optional))
@@ -2272,6 +2385,100 @@
         </div>
 
     </div>
+
+
+
+
+
+
+    <!-- RECURSION -->
+    <div class="modal" id="recursion" tabindex=-1 aria-labelledby="recursionLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recursionModalLabel">Recursion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <table class="tablequestion question-table">
+                        <tbody>
+                            <tr>
+                                <td class="infocell" colspan="2">Recursion</td>
+                            </tr>
+                            <tr>
+                                <td><i class="material-icons custom">stars</i> What is recursion?<br>
+                                    <i class="material-icons custom">stars</i> Why is recursion useful?<br>
+                                    <i class="material-icons custom">stars</i> Any alternative to recursion?<br>
+
+                                </td>
+                                <td><i class="material-icons custom">question_answer</i>
+                                    <p>Recursion is seen when a method (or a function) calls itself! It is a way to break a problem down into smaller parts of the same problem ...</p>
+                                    <p>The use of loops can provide a solution to a coding issue, anything that can be coded as a recursive solution can also be coded using loops. There are times when a recursive algorithm works well, and times when recursion
+                                        is less efficient.</p>
+
+
+
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="infocell" colspan="2">The Mechanics of Recursion</td>
+                            </tr>
+                            <tr>
+                                <td><i class="material-icons custom">stars</i> What's a base case?<br>
+                                    <i class="material-icons custom">stars</i> What's a recursive case?<br>
+
+                                </td>
+                                <td>
+                                    <i class="material-icons custom">question_answer</i>
+                                    <p>The base case is the last issue to be handled by the recursive solution. This is the condition that exits the recursive process. If it is not created, the recirsive solution will recirse infinitely.</p>
+                                    <p>The recursive case is the part of the solution that calls the method or function recursively, typically using parameters with different values.</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="infocell" colspan="2">Recursion & The Stack</td>
+                            </tr>
+                            <td>
+
+                                <i class="material-icons custom">stars</i> What part of memory does recursion use?<br>
+                                <i class="material-icons custom">stars</i> Is recursion efficient?
+                                <i class="material-icons custom">stars</i> What's a Stack Overflow Exception?<br>
+
+
+                            </td>
+                            <td>
+                                <p> <i class="material-icons custom">question_answer</i>
+                                    <p>Recursion works on an area of memory called the stack(popup).</p>
+                                    <p>Each time a recursive call is made, data is added to the stack - which increases memory usage. This is not an issue for fewer calls, but once many calls are made the increase in the use of the stack may impact the efficiency
+                                        of the solution.(popup)
+                                    </p>
+                                    <p>A Stack Overflow exception happens when a recursive solution does not have a valid base case. The stack is added to in an infinte loop.</p>
+                            </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     </div>
 
 
