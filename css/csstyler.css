@@ -848,7 +848,7 @@ i.custom {
 }
 
 .site-header .page-section-title {
-    font-size: 3em;
+    font-size: 2em;
     font-family: var(--font-family-sans-serif);
     font-weight: bolder;
 }
@@ -1035,4 +1035,8 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+.form-check {
+    font-size: 1em;
 }
