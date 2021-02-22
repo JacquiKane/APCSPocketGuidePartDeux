@@ -485,7 +485,9 @@
                                     <p>
                                         ArrayList instances dynamically grow (you can add more elements) and shrink (you can remove elements). ArrayList instances can only store references, not primitives. So, if required to store doubles, ints or booleans, the
 
-                                        <button type="button" class="btn btn-info" id="wrapperclassespopup" data-toggle="popover" title="Wrapper Classes" html="true"><i>wrapper classes</i></button> are used.
+                                        <button type="button" class="btn btn-info" 
+                                        id="wrapperclassespopup" data-toggle="popover" 
+                                        title="Wrapper Classes" html="true"><i>wrapper classes</i></button> are used.
                                     </p>
                                     <p>The ArrayList class is <button type="button" class="btn btn-info" id="importpopup" data-toggle="popover" title="Import java.util.ArrayList" html="true"><i>imported</i></button> into a Java application.
 
@@ -1395,13 +1397,15 @@
                                     <i class="material-icons custom">stars</i> Is inheritance part of OOP?<br>
                                 </td>
                                 <td><i class="material-icons custom">question_answer</i>
-                                    <p>A class is a software template for creating a software model, called an object. Inheritance allows the reuse of the code from a class, called the parent class or superclass, as the basis for another class, called the
+                                    <p>A class is a software template for creating a software model, 
+                                        called an object. Inheritance allows the reuse of the code 
+                                        from a class, called the parent class or superclass, as the basis for another class, called the
                                         child class or subclass.</p>
+                                        <p>Reuse of code and logic already developed in a parent class
+                                            results in less lines of code and easier maintenance.</p>
                                     <p>In Java, a class can only inherit from one other class, we say it doesn't support multiple inheritance. </p>
                                     <p>Inheritance is one of the 4 tenets of Object Oriented Programming!</p>
-                                    <p>Inheritance supports reuse of all the code and logic already developed in the parent class. This leads to less lines of code and easier maintenance.</p>
-
-
+                                    
 
                                 </td>
                             </tr>
@@ -1414,8 +1418,16 @@
                                 </td>
                                 <td>
                                     <i class="material-icons custom">question_answer</i>
-                                    <p>A class is designated as a subclass of another class, with the keyword, extends.</p>
-                                    <p>A subclass can rewrite a method with the same signature as in the superclass. When this method is called on an instance of the subclass, the method belonging to the subclass is called. </p>
+                                    <p>A class is designated as a subclass of another class, 
+                                        with the keyword,  <button type="button" class="btn btn-info" 
+                                        id="extendspopup" data-toggle="popover" 
+                                        title="extends keyword" html="true"><i>extends</i></button>.</p>
+                                    <p>A subclass can rewrite a method with the same signature as in 
+                                        the superclass. When this method is called on an instance of 
+                                        the subclass, the method belonging to the subclass is called. 
+                                        The superclass' method is  <button type="button" class="btn btn-info" 
+                                        id="overriddenpopup" data-toggle="popover" 
+                                        title="Overridden" html="true"><i>overridden</i></button></p> by the method in the subclass.
                                 </td>
                             </tr>
                             <tr>
@@ -1433,7 +1445,11 @@
 
                                     </p>
                                     Polymorphism is defined as the ability of different objects (related via inheritance) to respond to the same request in different ways. </p>
-                                    <p>A subclass can override a method defined in the superclass, and thus respond in a different way to an instance of the superclass.</p>
+                                    <p>A subclass can 
+                                        <button type="button" class="btn btn-info" 
+                                        id="polymorphismpopup" data-toggle="popover" 
+                                        title="Override" html="true"><i>override</i></button> a method
+                                         defined in the superclass, and thus respond in a different way to an instance of the superclass.</p>
 
 
                                     <br>
@@ -1454,7 +1470,12 @@
                             </td>
                             <td>
                                 <p> <i class="material-icons custom">question_answer</i>
-                                    <p>A class cast exception occurs when an object is instantiated using a subclass, but cast to the parent class.</p>
+                                    <p>A 
+                                        <button type="button" class="btn btn-info" 
+                                        id="classcastpopup" data-toggle="popover" 
+                                        title="Class cast Exception" html="true">
+                                        <i>class cast exception</i></button> 
+                                         occurs when an object is instantiated using a subclass, but cast to the parent class.</p>
                             </td>
                             </tr>
 
@@ -1465,6 +1486,102 @@
 
                 </div>
 
+                <!-- START POPOVER CONTENT FOR INHERITANCE-->
+                <div id="extendscontent" style="display: none">
+                    <div>
+
+                        <p>
+                         Class, MidfieldSoccerPlayer, <i>extends</i> class SoccerPlayer. 
+                         MidfieldSoccerPlayer inherits all of the attributes and methods 
+                         of the parent class.
+                        </p>
+<p>
+    public MidfieldSoccerPlayer extends SoccerPlayer {<br>
+&nbsp;&nbsp;private double depthPerception; <br>
+    }<br>
+</p>
+                    </div>
+                </div>
+                <div id="overriddencontent" style="display: none">
+                    <div>
+
+                        <p>
+                         Class, MidfieldSoccerPlayer, overrides the trainingRequirement() method defined in SoccerPlayer.
+                        </p>
+                        <p>
+                            public class SoccerPlayer {<br>
+                                &nbsp;&nbsp;private String name;<br>
+                                &nbsp;&nbsp;// <br>
+                                &nbsp;&nbsp;   public String trainingRequirements() { <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;// Generic requirements print<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                    }<br>
+                                &nbsp;&nbsp;}
+                        </p>
+<p>
+    public MidfieldSoccerPlayer extends SoccerPlayer {<br>
+&nbsp;&nbsp;private double depthPerception; <br>
+&nbsp;&nbsp;   public String trainingRequirements() { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Specialized requirements print<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    }<br>
+</p>
+                    </div>
+                </div>
+                <div id="polymorphismcontent" style="display: none">
+                    <div>
+
+                        <p>
+                         Class, MidfieldSoccerPlayer, overrides the trainingRequirement() method defined in SoccerPlayer.
+                        </p>
+                        <p>
+                            public class SoccerPlayer {<br>
+                                &nbsp;&nbsp;private String name;<br>
+                                &nbsp;&nbsp;// <br>
+                                &nbsp;&nbsp;   public String trainingRequirements() { <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;// Generic requirements print<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                    }<br>
+                                &nbsp;&nbsp;}
+                        </p>
+<p>
+    public MidfieldSoccerPlayer extends SoccerPlayer {<br>
+&nbsp;&nbsp;private double depthPerception; <br>
+&nbsp;&nbsp;   public String trainingRequirements() { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Specialized requirements print<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    }<br>
+</p>
+<p>What happens as a result of the code?</p>
+<p> (a) SoccerPlayer player1 = new SoccerPlayer();<br>
+    
+player1.trainingRequirements();</p>
+<p> (b) SoccerPlayer player2 = new MidfieldSoccerPlayer();</p>
+<p>In (a) the generic requirements are printed. In (b) the specialized requirements are printed because the instance is recognized as an instance of MidfieldSoccerPlayer at runtime.</p>
+                    </div>
+                </div>
+                <div id="classcastcontent" style="display: none">
+                    <div>
+
+                        <p>
+                         Class, MidfieldSoccerPlayer, is a subclass of class, SoccerPlayer.
+                        </p>
+                       
+<p>
+    public MidfieldSoccerPlayer extends SoccerPlayer {<br>
+&nbsp;&nbsp;// Attributes, Methods
+    }<br>
+</p>
+<p>The code causes a class cast exception, as MidfieldSoccerPlayer 
+    instances are more specialized than SoccerPlayer instances.</p>
+<p> MidfieldSoccerPlayer player = (MidfieldSoccerPlayer)(new SoccerPlayer());<br>
+    <p>This code works fine, but may require a future cast to MidfieldSoccerPlayer!</p>
+    <p>SoccerPlayer player = new MidfieldSoccerPlayer();</p>
+    
+
+                    </div>
+                </div>
+                                <!-- END POPOVER CONTENT FOR INHERITANCE-->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
@@ -2844,17 +2961,47 @@
             });
         });
     </script>
+        <script>
+            $(document).ready(function() {
+                $('#extendspopup').popover({
+                    html: true,
+                    content: function() {
+                        return $('#extendscontent').html();
+                    }
+                });
+            });
+        </script>
+            <script>
+                $(document).ready(function() {
+                    $('#overriddenpopup').popover({
+                        html: true,
+                        content: function() {
+                            return $('#overriddencontent').html();
+                        }
+                    });
+                });
+            </script>
+             <script>
+                $(document).ready(function() {
+                    $('#polymorphismpopup').popover({
+                        html: true,
+                        content: function() {
+                            return $('#polymorphismcontent').html();
+                        }
+                    });
+                });
+            </script>
+                         <script>
+                            $(document).ready(function() {
+                                $('#classcastpopup').popover({
+                                    html: true,
+                                    content: function() {
+                                        return $('#classcastcontent').html();
+                                    }
+                                });
+                            });
+                        </script>
 </body>
-
-
-
-
-
-
-
-
-
-
 
 
 </html>
