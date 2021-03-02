@@ -367,32 +367,38 @@
 
 
                                     <p>An array is an object itself and has to be both
-                                        <button type="button" class="btn btn-info" id="declarenewuparray" data-bs-toggle="popover" data-bs-trigger="hover focus" 
-                                                title="declare and new up an array" html="true">declared and instantiated</button> to make
+                                        <button type="button" class="btn btn-info" 
+                                        id="declarenewuparray" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="declare and new up an array" html="true">declared and instantiated</button> to make
                                         space for the number of items.</p>
 
                                     <p>Array elements are accessed using square brackets and an index, or subscript,
                                         <br>&nbsp;&nbsp;&nbsp;arrayName[index]<br> index starts at 0 as arrays are zero-based. The index is valid between 0 and 1 less than the
-                                        <button type="button" class="btn btn-info" id="numofelements" data-toggle="popover" title="number of array elements" html="true">number of
+                                        <button type="button" class="btn btn-info" id="numofelements" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="number of array elements" html="true">number of
                                             elements in the array</button>. An invalid index results in an out of bounds error.
                                     </p>
                                     <p>You can use loops to traverse an array,
-                                      
-                                        <button type="button" class="btn btn-info" id="forlooptraversal" data-bs-toggle="popover" 
-                                                data-bs-trigger="hover focus" data-placement="bottom" title="for loop" html="true" data-placement="top">for loop</button>,
-                                        <button type="button" class="btn btn-info" id="enhancedforlooptraversal" data-toggle="popover" title="enhanced for loop" html="true">enhanced for
+                                        <button type="button" class="btn btn-info" 
+                                        id="forlooptraversal" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" 
+                                        title="for loop" html="true" data-placement="top">for loop</button>,
+                                        <button type="button" class="btn btn-info" id="enhancedforlooptraversal" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="enhanced for loop" html="true">enhanced for
                                             loop</button>,
-                                        <button type="button" class="btn btn-info" id="whilelooptraversal" data-toggle="popover" title="while loop" html="true" data-placement="top">while loop</button>.
+                                        <button type="button" class="btn btn-info" id="whilelooptraversal" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="while loop" html="true" data-placement="top">while loop</button>.
                                     </p>
 
-                                    <p>There are <button type="button" class="btn btn-info" id="arrayalgorithms" data-toggle="popover" title="array algorithms" html="true" data-placement="top">standard array
+                                    <p>There are <button type="button" class="btn btn-info" id="arrayalgorithms" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="array algorithms" html="true" data-placement="top">standard array
                                             algorithms</button>, for searching, sorting, finding max/min/average.
                                     </p>
 
                                     <!-- popover dialog content START for ARRAYS --------------->
                                     <div id="arrayalgorithmscontent" style="display: none">
                                         <div>
-                                            <p>Some useful algorithms are:
+                                            <p>Some useful algorithms:
                                                 <ol>
                                                     <li>Linear Search</li>
                                                     <li>Binary Search</li>
@@ -401,7 +407,7 @@
                                                     <li>Insert Sort</li>
                                                     <li>Select Sort</li>
                                                 </ol>
-                                                See the link for <i>Array Algorithms</i> below, and check the code and efficiency.
+                                                See link, <i>Array Algorithms</i> below, check code & efficiency.
                                             </p>
                                         </div>
                                     </div>
@@ -432,11 +438,11 @@
 
                                     <div id="arrayforloop" style="display: none">
                                         <div>
-                                            <p>Given array, arr, of ints</p>
+                                            <p>Given array of ints, players</p>
                                             <p>for (int index = 0; index &lt; arr.length; index++) {<br> &nbsp;&nbsp;&nbsp;System.out.println(arr[index]);
                                                 <br> &nbsp;&nbsp;&nbsp;}
                                             </p>
-                                            <p>Given array of SoccerPlayer objects, team,</p>
+                                   
                                             <p>for (int index = 0; index &lt; team.length; index++) {
                                                 <br> &nbsp;&nbsp;&nbsp;System.out.println(team[index].getName());
                                                 <br> &nbsp;&nbsp;&nbsp;}
@@ -446,11 +452,11 @@
 
                                     <div id="arrayenhancedforloop" style="display: none">
                                         <div>
-                                            <p>Given array, arr, of ints</p>
+                                            <p>Given array of ints, players</p>
                                             <p>for (int item : arr) {<br> &nbsp;&nbsp;&nbsp; System.out.println(item);
                                                 <br> &nbsp;&nbsp;&nbsp;}
                                             </p>
-                                            <p>Given array of SoccerPlayer objects, team,</p>
+                                        
                                             <p>for (SoccerPlayer player : team) {<br> &nbsp;&nbsp;&nbsp; System.out.println(player.getName());
                                                 <br> &nbsp;&nbsp;&nbsp;}
                                             </p>
@@ -459,14 +465,14 @@
 
                                     <div id="arraywhileloop" style="display: none">
                                         <div>
-                                            <p>Given array of int, arr,</p>
+                                            <p>Given array of ints, players,</p>
                                             <p>int[] arr = {1,2,3,4,5,6,7,8,9};</p>
                                             <p>int index = 0;</p>
                                             <p>while (index &lt; arr.length) {<br> &nbsp;&nbsp;&nbsp; System.out.println(arr[index]);
                                                 <br>&nbsp;&nbsp;&nbsp; index++;
                                                 <br> &nbsp;&nbsp;}
                                             </p>
-                                            <p>Given array of SoccerPlayer objects, team,</p>
+                                      
                                             <p>int index = 0;</p>
                                             <p>while (index &lt; team.length) {<br> &nbsp;&nbsp;&nbsp; System.out.println(team[index].getName());
                                                 <br>&nbsp;&nbsp;&nbsp; index++;
@@ -499,24 +505,32 @@
                                     <p>
                                         ArrayList instances dynamically grow (you can add more elements) and shrink (you can remove elements). ArrayList instances can only store references, not primitives. So, if required to store doubles, ints or booleans, the
 
-                                        <button type="button" class="btn btn-info" id="wrapperclassespopup" data-toggle="popover" title="Wrapper Classes" html="true"><i>wrapper
+                                        <button type="button" class="btn btn-info" id="wrapperclassespopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Wrapper Classes" html="true"><i>wrapper
                                                 classes</i></button> are used.
                                     </p>
-                                    <p>The ArrayList class is <button type="button" class="btn btn-info" id="importpopup" data-toggle="popover" title="Import java.util.ArrayList" html="true"><i>imported</i></button> into a Java application.
+                                    <p>The ArrayList class is <button type="button" class="btn btn-info" id="importpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Import java.util.ArrayList" html="true"><i>imported</i></button> into a Java application.
 
-                                        <p>The class, ArrayList, is <button type="button" class="btn btn-info" id="declarenewuparraylistpopup" data-toggle="popover" title="declare and new up ArrayList" html="true"><i>newed
+                                        <p>The class, ArrayList, is <button type="button" class="btn btn-info" id="declarenewuparraylistpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="declare and new up ArrayList" html="true"><i>newed
                                                     up/instantiated</i></button> to create an instance.
                                         </p>
                                         <p>Methods commonly used are <a href="https://jacquikane.github.io/APCSArrayListImportantMethods/">get,
                                                 set, remove, add</a>.</p>
-                                        <p>Elements are accessed by using the <button type="button" class="btn btn-info" id="accessarraylistpopup" data-toggle="popover" title="Access ArrayList Elements" html="true"><i><i>get</i>
+                                        <p>Elements are accessed by using the <button type="button" class="btn btn-info" id="accessarraylistpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Access ArrayList Elements" html="true"><i><i>get</i>
                                                     method</i></button> and a valid index. </p>
-                                        <p> <button type="button" class="btn btn-info" id="forarraylistpopup" data-toggle="popover" title="for loop with ArrayList instance" html="true"><i>for</i></button>,
-                                            <button type="button" class="btn btn-info" id="whilearraylistpopup" data-toggle="popover" title="while loop with ArrayList instance" html="true"><i>while</i></button>,
-                                            <button type="button" class="btn btn-info" id="enhancedforarraylistpopup" data-toggle="popover" title="enhanced for loop with ArrayList instance" html="true"><i>enhanced for</i></button> loops are used to traverse
+                                        <p> <button type="button" class="btn btn-info" id="forarraylistpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="for loop with ArrayList instance" html="true"><i>for</i></button>,
+                                            <button type="button" class="btn btn-info" id="whilearraylistpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="while loop with ArrayList instance" html="true"><i>while</i></button>,
+                                            <button type="button" class="btn btn-info" id="enhancedforarraylistpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="enhanced for loop with ArrayList instance" html="true"><i>enhanced for</i></button> loops are used to traverse
                                             or sequence through an ArrayList instance.
                                         </p>
-                                        <p> <button type="button" class="btn btn-info" id="arraylistalgorithmspopup" data-toggle="popover" title="ArrayList Algorithms" html="true"><i>Standard algorithms</i></button> are used to process elements in an ArrayList
+                                        <p> <button type="button" class="btn btn-info" id="arraylistalgorithmspopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="ArrayList Algorithms" html="true"><i>Standard algorithms</i></button> are used to process elements in an ArrayList
                                             instance.
                                         </p>
                                 </td>
@@ -548,7 +562,8 @@
                                     </div>
 
 
-                                    <p>2D arrays have to be newed up before being used, specifying the exact number of rows and columns. A 2D Array is declared using Java syntax, with double brackets, [][], and a specification of the type/class being stored.
+                                    <p>2D arrays have to be newed up before being used, 
+                                        specifying the exact number of rows and columns. A 2D Array is declared using Java syntax, with double brackets, [][], and a specification of the type/class being stored.
                                     </p>
 
                                     <p>
@@ -563,7 +578,8 @@
                                         <p>SoccerPlayer[][] players = new SoccerPlayer[3][3]; </p>
                                         <p>2D Array instances can be declared and initialized using <i>Object
                                                 Initialization Syntax</i>, with an
-                                            <button type="button" class="btn btn-info" id="2darrayinitializerlistpopup" data-toggle="popover" title="2D Arrays, 
+                                            <button type="button" class="btn btn-info" id="2darrayinitializerlistpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="2D Arrays, 
                                             Initializer List" html="true"><i>initializer list</i></button>.</p>
                                         <p>Important! Remember to new up the 2D array, or use an initializer list before accessing an element!</p>
                                         <p> 2D arrays are accessed using row and column.</p>
@@ -572,15 +588,21 @@
                                         <p>numbers[1][2] is in red, this element is on row 1 and column 2.</p>
                                         <p>Valid index values for rows in a 2D array are from 0 to the length of the array, less one. Valid index values for columns in a 2D array are from 0 to the length of a row, less one. See best practices for getting
                                             the
-                                            <button type="button" class="btn btn-info" id="2darraylastelementpopup" data-toggle="popover" title="2D Arrays, Last Element" html="true"><i>last element</i></button> in the 2D array. </p>
-                                        <p><button type="button" class="btn btn-info" id="rowmajororderpopup" data-toggle="popover" title="Row-Major Order" html="true"><i>Row-Major
+                                            <button type="button" class="btn btn-info" id="2darraylastelementpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="2D Arrays, Last Element" html="true"><i>last element</i></button> in the 2D array. </p>
+                                        <p><button type="button" class="btn btn-info" id="rowmajororderpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Row-Major Order" html="true"><i>Row-Major
                                                     Order</i></button> and
-                                            <button type="button" class="btn btn-info" id="columnmajororderpopup" data-toggle="popover" title="Column-Major Order" html="true"><i>Column-Major Order</i></button> describe how the 2D array is read, either
+                                            <button type="button" class="btn btn-info" id="columnmajororderpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Column-Major Order" html="true"><i>Column-Major Order</i></button> describe how the 2D array is read, either
                                             across rows or down columns.</p>
                                         <p>2D arrays are traversed using nested loops,
-                                            <button type="button" class="btn btn-info" id="2darrayforpopup" data-toggle="popover" title="2D array, Nested for loop" html="true">for</button>,
-                                            <button type="button" class="btn btn-info" id="2darraywhilepopup" data-toggle="popover" title="2D array, nested while loop" html="true">while</button>,
-                                            <button type="button" class="btn btn-info" id="2darrayenhancedforpopup" data-toggle="popover" title="2D array, nested, enhanced for loop" html="true"> enhanced for</button>, using Row major Order or Column Major
+                                            <button type="button" class="btn btn-info" id="2darrayforpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="2D array, Nested for loop" html="true">for</button>,
+                                            <button type="button" class="btn btn-info" id="2darraywhilepopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="2D array, nested while loop" html="true">while</button>,
+                                            <button type="button" class="btn btn-info" id="2darrayenhancedforpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="2D array, nested, enhanced for loop" html="true"> enhanced for</button>, using Row major Order or Column Major
                                             Order.
                                         </p>
                                 </td>
@@ -591,7 +613,8 @@
                     <!-- popover dialog content START for ARRAYLISTS --------------->
                     <div id="wrapperclassescontent" style="display: none">
                         <div>
-                            <p><i>Wrapper Classes</i> 'wrap' a primitive to reflect as an object.The Wrapper classes are
+                            <p><i>Wrapper Classes</i> 'wrap' primitive as objects.
+                               
                                 <ol>
                                     <li>Double, for double</li>
                                     <li>Integer, for int</li>
@@ -625,11 +648,17 @@
 
                     <div id="accessarraylistcontent" style="display: none">
                         <div>
-                            <p>The <i>get</i> method is used to access an element of the ArrayList instance. A numeric index is used, between 0 and the last valid index. </p>
-                            Given a list of instances of Employee instances, where Employee is a class, the element at index 2 is accessed like this,</p>
+                            <p>The <i>get</i> method accesses elements
+                                 of the ArrayList instance. 
+                                 A numeric index is used, between 0 and the last valid index. </p>
+                            Given a list of Employee instances, 
+                            where Employee is a class, the element at index 2 is 
+                            accessed like this,</p>
                             <p>Employee employee = employees.get(2);</p>
-                            <p>If the index is outside the bounds of the list, as in less than 0 or greater than the number of elements in the list, less 1, an <i>out of bounds error</i> results</p>
-                            <p>It is best to use the .size() method to best determine the last viable index,</p>
+                            <p>If the index is outside the bounds of the list, 
+                                &lt; 0 or, > employees.size()-1, an <i>out of bounds error</i> 
+                                results</p>
+                            <p>It is best to use the .size() method to get the last viable index,</p>
                             <p>Employee employee1 = employees.get(employeeArrayList.size()-1);</p>
                         </div>
                     </div>
@@ -656,14 +685,14 @@
 
                     <div id="whilearraylistcontent" style="display: none">
                         <div>
-                            <p>A list of numbers,</p>
+                            <p>Given a list of numbers, objects</p>
                             <p>ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;();</p>
                             <p> with Integer instances added.</p>
                             <p>int index = 0;</p>
                             <p>while (index &lt; numbers.size()) {
                                 <br> &nbsp;&nbsp;&nbsp;System.out.println(numbers.get(index));
                                 <br> &nbsp;&nbsp;&nbsp;<br> &nbsp;&nbsp;&nbsp; index++;<br> &nbsp;&nbsp;&nbsp;}
-                                <p>A list of objects -
+                                <p>
 
                                     <p>Given class, Employee, with attribute name and accessor getname(), </p>,
                                     <p>ArrayList&lt;Employee&gt; employees = new ArrayList&lt;Employee&gt;();</p>
@@ -678,14 +707,14 @@
                     </div>
                     <div id="enhancedforarraylistcontent" style="display: none">
                         <div>
-                            <p>A list of numbers,</p>
+                            <p>Given a list of numbers, objects</p>
                             <p>ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;();</p>
                             <p> with Integer instances added.</p>
 
                             <p>for (Integer num : numbers) {
                                 <br> &nbsp;&nbsp;&nbsp;System.out.println(num.get(index));
                                 <br> &nbsp;&nbsp;&nbsp;}
-                                <p>A list of objects -
+                                <p>
 
                                     <p>Given class, Employee, with attribute name and accessor getname(), </p>,
                                     <p>ArrayList&lt;Employee&gt; employees = new ArrayList&lt;Employee&gt;();</p>
@@ -708,7 +737,7 @@
                                     <li>Insert Sort</li>
                                     <li>Select Sort</li>
                                 </ol>
-                                See the link for <i>ArrayList Algorithms</i> below, and check the code and efficiency.
+                                See link, <i>ArrayList Algorithms</i>, check code & efficiency.
                             </p>
                         </div>
                     </div>
@@ -902,7 +931,8 @@
                                     requirement. A reference is the beginning memory 
                                     address of data stored in computer memory.
                                     <button type="button" class="btn btn-info" 
-                                    id="testing123" data-toggle="popover" 
+                                    id="testing123" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" 
                                     data-placement="top" title="testing hover" 
                                     html="true">test</button></td>
                             </tr>
@@ -1447,9 +1477,11 @@
                                 </td>
                                 <td>
                                     <i class="material-icons custom">question_answer</i>
-                                    <p>A class is designated as a subclass of another class, with the keyword, <button type="button" class="btn btn-info" id="extendspopup" data-toggle="popover" title="extends keyword" html="true"><i>extends</i></button>.</p>
+                                    <p>A class is designated as a subclass of another class, with the keyword, <button type="button" class="btn btn-info" id="extendspopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="extends keyword" html="true"><i>extends</i></button>.</p>
                                     <p>A subclass can rewrite a method with the same signature as in the superclass. When this method is called on an instance of the subclass, the method belonging to the subclass is called. The superclass' method is
-                                        <button type="button" class="btn btn-info" id="overriddenpopup" data-toggle="popover" title="Overridden" html="true"><i>overridden</i></button>
+                                        <button type="button" class="btn btn-info" id="overriddenpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Overridden" html="true"><i>overridden</i></button>
                                     </p> by the method in the subclass.
                                 </td>
                             </tr>
@@ -1470,7 +1502,8 @@
                                     </p>
                                     Polymorphism is defined as the ability of different objects (related via inheritance) to respond to the same request in different ways. </p>
                                     <p>A subclass can
-                                        <button type="button" class="btn btn-info" id="polymorphismpopup" data-toggle="popover" title="Override" html="true"><i>override</i></button> a method defined in the superclass, and thus respond in a different way
+                                        <button type="button" class="btn btn-info" id="polymorphismpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Override" html="true"><i>override</i></button> a method defined in the superclass, and thus respond in a different way
                                         to an instance of the superclass.</p>
 
 
@@ -1493,7 +1526,8 @@
                             <td>
                                 <p> <i class="material-icons custom">question_answer</i>
                                     <p>A
-                                        <button type="button" class="btn btn-info" id="classcastpopup" data-toggle="popover" title="Class cast Exception" html="true">
+                                        <button type="button" class="btn btn-info" id="classcastpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Class cast Exception" html="true">
                                             <i>class cast exception</i></button> occurs when an object is instantiated using a subclass, but cast to the parent class.
                                     </p>
                             </td>
@@ -2532,7 +2566,8 @@
 
                                 </td>
                                 <td><i class="material-icons custom">question_answer</i>
-                                    <p>Recursion is seen when a method (or a function) calls itself, like a recursive solution to <button type="button" class="btn btn-info" id="factorialpopup" data-toggle="popover" title="Factorial" html="true">Factorial</button>.
+                                    <p>Recursion is seen when a method (or a function) calls itself, like a recursive solution to <button type="button" class="btn btn-info" id="factorialpopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Factorial" html="true">Factorial</button>.
                                         It is a way to break a problem down into smaller parts of the same problem ...</p>
                                     <p>There are times when a recursive algorithm works well, and times when recursion is less efficient.</p>
                                 </td>
@@ -2549,7 +2584,8 @@
                                     <i class="material-icons custom">question_answer</i>
                                     <p>The base case is the last issue to be handled by the recursive solution. This is the condition that exits the recursive process. If it is not created, the recursive solution will recurse infinitely.</p>
                                     <p>The recursive case is the part of the solution that calls the method or function recursively, typically using parameters with different values.</p>
-                                    <p>Recursive solutions must have a <button type="button" class="btn btn-info" id="baserecursivepopup" data-toggle="popover" title="Factorial" html="true">base and recursive</button> case.</p>
+                                    <p>Recursive solutions must have a <button type="button" class="btn btn-info" id="baserecursivepopup" data-bs-toggle="popover" 
+                                        data-bs-trigger="hover focus" title="Factorial" html="true">base and recursive</button> case.</p>
                                 </td>
                             </tr>
                             <tr>
