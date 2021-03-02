@@ -889,17 +889,27 @@
                     <table class="tablequestion question-table">
                         <tbody>
                             <tr>
-                                <td class="infocell" colspan="2">Primitive data types, reference types</td>
+                                <td class="infocell" colspan="2">Primitive data types, 
+                                    reference types</td>
                             </tr>
                             <tr>
                                 <td><i class="material-icons custom">stars</i>How do primitive data types and reference types differ?</td>
-                                <td><i class="material-icons custom">question_answer</i>Primitives represent values, of known storage requirement. A reference is the beginning memory address of data stored in computer memory.</td>
+                                <td><i class="material-icons custom">question_answer</i>
+                                    Primitives represent values, of known storage 
+                                    requirement. A reference is the beginning memory 
+                                    address of data stored in computer memory.
+                                    <button type="button" class="btn btn-info" 
+                                    id="testing123" data-toggle="popover" 
+                                    data-trigger="hover" title="testing hover" 
+                                    html="true">test</button></td>
                             </tr>
 
                             <tr class="trquestion">
 
                                 <td colspan="2" class="infocell">
-                                    Know the bit requirements for primitive data types - boolean, int, double
+                                    Know the bit requirements for primitive data types - 
+                                    boolean, int, double
+                                   </p>
                                 </td>
 
                             </tr>
@@ -2605,6 +2615,15 @@
 
                             </div>
                         </div>
+
+                        <div id="testing123content" style="display: none">
+                            <div>
+                                <p>This is a hover test only.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nemo quos ratione eum laboriosam neque, magni vero sint laudantium voluptatem ea suscipit esse, corrupti odio id quidem reprehenderit! Voluptas, sapiente.
+                                </p>
+
+                            </div>
+                        </div>
                         <!-- END Recursion popup content -->
                     </table>
 
@@ -3048,6 +3067,16 @@
             });
         });
     </script>
+        <script>
+            $(document).ready(function() {
+                $('#testing123').popover({
+                    html: true,
+                    content: function() {
+                        return $('#testing123content').html();
+                    }
+                });
+            });
+        </script>
 </body>
 
 
